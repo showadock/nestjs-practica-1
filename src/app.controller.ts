@@ -7,12 +7,15 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return 'Hola mundo!';
+    return this.appService.getHello();
   }
 
-  @Get('nuevo')
+  @Get('suma')
   newEndpoint() {
-    return 'yo soy nuevo';
+    let a = 20;
+    let b = 50;
+
+    return a + b;
   }
 
   @Get('/ruta/')
